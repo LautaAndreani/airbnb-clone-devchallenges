@@ -60,7 +60,7 @@ const DropMenu = ({ isOpen, onClose, setUserData, userData, setFullData, fullDat
                     </Text>
                   </Stack>
                 </Stack>
-                <Button type="submit" bg="none" w={{ base: "100%", lg: "unset" }} onClick={handleSubmit} bg="brand.100" color="brand.backgroundColor" _hover={{ bg: "red.500" }}>
+                <Button type="submit" w={{ base: "100%", lg: "unset" }} onClick={handleSubmit} bg="brand.100" color="brand.backgroundColor" _hover={{ bg: "red.500" }}>
                   <Icon as={FaSearch} marginRight={3} />
                   Search
                 </Button>
