@@ -16,8 +16,8 @@ const Header = ({ onOpen, fullData, userData }) => {
     >
       <Link href="/">
         <a>
-          <Box>
-            <Image src="/logo.png" alt="logo windbnb" width={"100%"} />
+          <Box width="8rem">
+            <Image src="/logo.svg" alt="logo windbnb" width={"100%"} />
           </Box>
         </a>
       </Link>
