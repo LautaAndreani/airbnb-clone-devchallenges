@@ -8,11 +8,11 @@ const StayCard = ({ stay }) => {
   return (
     <Box>
       <Box borderRadius="xl" overflow={"hidden"} width={"100%"} transition=".3s ease-in-out" _hover={{ transform: "scale(1.02)" }}>
-        <Image src={stay.photo} width={100} height={70} layout="responsive" alt="apartment image" priority />
+        <Image src={stay.photo} width={100} height={70} layout="responsive" alt="apartment image" objectFit="cover" priority />
       </Box>
       <Stack direction="column" marginTop={5}>
         <Stack direction="row" alignItems="center" justifyContent={"space-between"}>
-          <Flex alignItems={"center"} spac>
+          <Flex alignItems={"center"}>
             {stay.superHost && (
               <Text
                 as="h2"

@@ -1,22 +1,22 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
-import stays from "/stays.json";
 import { Box, Button, Center, Grid, Stack, Text, useDisclosure, Icon } from "@chakra-ui/react";
+import { RiFilter3Fill } from "react-icons/ri";
 
 import DropMenu from "../components/DropMenu";
 import Header from "../components/Header";
 import StayCard from "../components/StayCard";
-import { RiFilter3Fill } from "react-icons/ri";
+import stays from "/stays.json";
 
 export default function Home() {
   const [mock, setMock] = useState(stays);
   const [userData, setUserData] = useState({});
   const [fullData, setFullData] = useState({});
-  const { onOpen, isOpen, onClose } = useDisclosure();
+  const { onOpen, onClose, isOpen } = useDisclosure();
   //Filter
   const handleFilter = (adults, kids) => {
-    const guests = adults + kids;
-    const filtersito = mock.filter((location) => location.city === userData.country.split(",", 1).toString() && location.maxGuests >= guests);
+    const guests = adults += kids;
+    const filtersito = mock.filter((location) => location.city === (userData.country ? userData.country.split(",", 1).join() : 'Helsinki') && location.maxGuests >= guests);
     setMock(filtersito);
   };
   //Click reset filter
